@@ -1,0 +1,30 @@
+Write a program that will print the result of a math expression given as an argument.
+You must handle the operations plus(+), multiplication (*) and parentheses.
+Values will be between 0 and 9. For example this should work:
+
+allowed functions: malloc, calloc, realloc, free, printf, isdigit, write
+program needs to print the result of a math expression.
+handles * and + and parenthesis.
+does not handle whitespace.
+values are between 0 and 9.
+if unexpected symbol OR unexpected '(' ')' -> print error and exit(1)
+if symbol is at the end of input print error
+if syscall failure exit(1)
+
+For example this should work:
+./vbc '1' | cat -e
+1$
+$> .vbc '2+3' | cat -e
+5$
+$> .vbc '3*4+5' | cat -e
+17$
+$> .vbc '3+4*5' | cat -e
+23$
+$> .vbc '(3+4)*5' | cat -e
+35$
+$> .vbc '(((((2+2)*2+2)*2+2)2+2)*2+2)*2' | cat -e
+188$
+./vbc '1+'
+$unexpected end of input
+$> ./vbc '1+2)'
+$unexpected token ')'
