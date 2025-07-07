@@ -51,7 +51,7 @@ static int	parse_factor(void)
 			error_tok(*input);
 		return (0);
 	}
-	if (isdigit((unsigned char)*p))
+	if (isdigit((unsigned char)*input))
 	{
 		value = *input - '0';
 		input++;

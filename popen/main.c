@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <sys/types.h>
 #include <unistd.h>
-#include "get_next_line.h"
 
 int	ft_popen(const char *file, const char *argv[], char type)
 {
